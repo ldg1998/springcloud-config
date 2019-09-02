@@ -1,0 +1,72 @@
+spring:
+  profiles: 
+    active: 
+    - dev
+---
+server: 
+  port: 8001
+spring: 
+  profiles: dev
+  application:
+    name: springclouf-provider-config-client
+  datasource: 
+    type: com.alibaba.durid.pool.DuridDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: http://localhost:3306/cloudDB01
+    username: root
+    password: root
+    dbcp2: 
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.asia.springcloud.entities
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+eureka:
+  client:
+    service-url: 
+      defaulzone: http://eureka-dev.com:7001/eureka
+  instance:
+    instance-id: dept-8001.com
+    prefer-ip-address: true
+info: 
+  app.name: springcloudconfig01
+  conpany.name: www.asiainfo.com
+  build.artifactId: $project.artifactId$
+---
+server: 
+  port: 8001
+spring: 
+  profiles: dev
+  application:
+    name: springclouf-provider-config-client
+  datasource: 
+    type: com.alibaba.durid.pool.DuridDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: http://localhost:3306/cloudDB02
+    username: root
+    password: root
+    dbcp2: 
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.asia.springcloud.entities
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+eureka:
+  client:
+    service-url: 
+      defaulzone: http://eureka-dev.com:7001/eureka
+  instance:
+    instance-id: dept-8001.com
+    prefer-ip-address: true
+info: 
+  app.name: springcloudconfig01
+  conpany.name: www.asiainfo.com
+  build.artifactId: $project.artifactId$
