@@ -28,7 +28,7 @@ mybatis:
 eureka:
   client:
     service-url: 
-      defaulzone: http://eureka7001.com7001/eureka
+      defaulzone: http://eureka7001.com:7001/eureka
   instance:
     instance-id: dept-8001.com
     prefer-ip-address: true
@@ -62,7 +62,7 @@ mybatis:
 eureka:
   client:
     service-url: 
-      defaulzone: http://eureka7001.com7001/eureka
+      defaulzone: http://eureka7001.com:7001/eureka
   instance:
     instance-id: dept-8001.com
     prefer-ip-address: true
