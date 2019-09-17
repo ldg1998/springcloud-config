@@ -38,7 +38,7 @@ info:
   build.artifactId: $project.artifactId$
 ---
 server: 
-  port: 8001
+  port: 8002
 spring: 
   profiles: dev
   application:
