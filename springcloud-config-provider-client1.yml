@@ -40,7 +40,7 @@ info:
 server: 
   port: 8002
 spring: 
-  profiles: dev
+  profiles: test
   application:
     name: springcloud-config-provider-client1
   datasource: 
